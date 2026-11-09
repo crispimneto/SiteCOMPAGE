@@ -4,150 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COMPAGE | BPO Financeiro</title>
-  <meta name="description" content="COMPAGE - BPO Financeiro para empresas que não possuem um departamento financeiro estruturado.">
+  <meta name="description" content="COMPAGE - BPO Financeiro para empresas que não possuem um departamento financeiro estruturado. Bacabal - MA.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- ===== CABEÇALHO / MENU ===== -->
-  <header class="topo">
-    <div class="container topo-conteudo">
-      <a href="#inicio" class="logo">COMPAGE</a>
-      <!-- Quando o logo chegar: <a href="#inicio" class="logo"><img src="img/logo.svg" alt="COMPAGE"></a> -->
-
-      <button class="menu-botao" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="menu">
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#parceiros">Parceiros</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </div>
-  </header>
+  <header class="topo" id="topo"></header>
 
   <main>
-    <!-- ===== INÍCIO ===== -->
-    <section id="inicio" class="hero">
+    <section class="hero">
       <div class="container">
         <h1>Seu financeiro organizado, sem precisar montar um departamento</h1>
         <p>A COMPAGE assume a rotina financeira da sua empresa: contas, conciliações, cobranças e relatórios. Você ganha tempo para cuidar do seu negócio.</p>
         <div class="hero-botoes">
-          <a href="#contato" class="botao botao-principal">Fale conosco</a>
-          <a href="#servicos" class="botao botao-secundario">Conheça os serviços</a>
+          <a href="contato.html" class="botao botao-principal">Fale conosco</a>
+          <a href="servicos.html" class="botao botao-secundario">Conheça os serviços</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== SOBRE ===== -->
-    <section id="sobre" class="secao">
-      <div class="container sobre-grid">
-        <div>
-          <h2>Sobre a COMPAGE</h2>
-          <p>A COMPAGE é especializada em <strong>BPO Financeiro</strong>, a terceirização da gestão financeira para empresas que não possuem um departamento financeiro estruturado.</p>
-          <p>Cuidamos das rotinas do dia a dia com método, tecnologia e transparência, para que você tenha informações confiáveis e tome decisões com segurança.</p>
-        </div>
-        <ul class="destaques">
-          <li><strong>Organização</strong><span>Rotinas financeiras padronizadas e em dia.</span></li>
-          <li><strong>Transparência</strong><span>Relatórios claros sobre a saúde do seu caixa.</span></li>
-          <li><strong>Economia</strong><span>Custo menor que manter uma equipe interna.</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===== SERVIÇOS ===== -->
-    <section id="servicos" class="secao secao-alternada">
+    <section class="secao">
       <div class="container">
-        <h2>Serviços</h2>
-        <p class="subtitulo">Tudo o que o financeiro da sua empresa precisa, em um só lugar.</p>
+        <h2>Por que terceirizar o financeiro?</h2>
+        <p class="subtitulo">Mais controle, menos custo e informação confiável para decidir.</p>
         <div class="cards">
           <article class="card">
-            <h3>Contas a Pagar</h3>
-            <p>Agendamento e controle de pagamentos para evitar atrasos, juros e multas.</p>
+            <h3>Organização</h3>
+            <p>Rotinas financeiras padronizadas e sempre em dia.</p>
           </article>
           <article class="card">
-            <h3>Contas a Receber</h3>
-            <p>Acompanhamento de recebimentos, emissão de boletos e controle de inadimplência.</p>
+            <h3>Transparência</h3>
+            <p>Relatórios claros sobre a saúde do seu caixa.</p>
           </article>
           <article class="card">
-            <h3>Conciliação Bancária</h3>
-            <p>Conferência diária entre extratos e lançamentos, garantindo números corretos.</p>
-          </article>
-          <article class="card">
-            <h3>Fluxo de Caixa</h3>
-            <p>Visão clara de entradas e saídas, com projeções para planejar o futuro.</p>
-          </article>
-          <article class="card">
-            <h3>Relatórios Gerenciais</h3>
-            <p>Indicadores e DRE gerencial para apoiar as decisões do seu negócio.</p>
-          </article>
-          <article class="card">
-            <h3>Apoio à Contabilidade</h3>
-            <p>Documentação organizada e enviada ao seu contador no prazo.</p>
+            <h3>Economia</h3>
+            <p>Custo menor do que manter uma equipe financeira interna.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== PARCEIROS ===== -->
-    <section id="parceiros" class="secao">
-      <div class="container">
-        <h2>Parceiros</h2>
-        <p class="subtitulo">Empresas e soluções que trabalham junto com a COMPAGE.</p>
-        <div class="parceiros">
-          <!-- Trocar cada bloco por: <img src="img/parceiro1.png" alt="Nome do parceiro"> -->
-          <div class="parceiro">Parceiro 1</div>
-          <div class="parceiro">Parceiro 2</div>
-          <div class="parceiro">Parceiro 3</div>
-          <div class="parceiro">Parceiro 4</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CONTATO ===== -->
-    <section id="contato" class="secao secao-alternada">
-      <div class="container">
-        <h2>Contato</h2>
-        <p class="subtitulo">Fale com a gente e descubra como podemos ajudar sua empresa.</p>
-        <div class="contatos">
-          <a class="contato-item" href="https://wa.me/5500000000000" target="_blank" rel="noopener">
-            <strong>WhatsApp</strong>
-            <span>(00) 00000-0000</span>
-          </a>
-          <a class="contato-item" href="mailto:contato@compage.com.br">
-            <strong>E-mail</strong>
-            <span>contato@compage.com.br</span>
-          </a>
-          <div class="contato-item">
-            <strong>Endereço</strong>
-            <span>Rua Exemplo, 000 - Bairro<br>Cidade - UF, CEP 00000-000</span>
-          </div>
-          <div class="contato-item">
-            <strong>Redes sociais</strong>
-            <span class="redes">
-              <a href="#" target="_blank" rel="noopener">Instagram</a>
-              <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-              <a href="#" target="_blank" rel="noopener">Facebook</a>
-            </span>
-          </div>
-        </div>
+    <section class="secao secao-alternada">
+      <div class="container chamada">
+        <h2>Vamos organizar o financeiro da sua empresa?</h2>
+        <p class="subtitulo">Converse com a gente e receba uma proposta sob medida.</p>
+        <a href="contato.html" class="botao botao-principal">Entrar em contato</a>
       </div>
     </section>
   </main>
 
-  <!-- ===== RODAPÉ ===== -->
-  <footer class="rodape">
-    <div class="container">
-      <p>&copy; <span id="ano"></span> COMPAGE - BPO Financeiro. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- Botão flutuante do WhatsApp -->
-  <a href="https://wa.me/5500000000000" class="whatsapp-flutuante" target="_blank" rel="noopener" aria-label="Fale pelo WhatsApp">WhatsApp</a>
-
+  <footer class="rodape" id="rodape"></footer>
   <script src="js/script.js"></script>
 </body>
 </html>

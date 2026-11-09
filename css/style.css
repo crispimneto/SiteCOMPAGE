@@ -20,7 +20,7 @@
 
 /* ---------- Base ---------- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+html { scroll-behavior: smooth; }
 body {
   font-family: var(--fonte);
   color: var(--cor-texto);
@@ -58,6 +58,7 @@ h3 { font-size: 1.15rem; color: var(--cor-primaria); margin-bottom: 8px; }
 .menu { display: flex; gap: 28px; }
 .menu a { font-weight: 500; transition: color .2s; }
 .menu a:hover { color: var(--cor-secundaria); }
+.menu a.ativo { color: var(--cor-secundaria); font-weight: 700; }
 
 .menu-botao {
   display: none; background: none; border: none; cursor: pointer;
@@ -82,6 +83,15 @@ h3 { font-size: 1.15rem; color: var(--cor-primaria); margin-bottom: 8px; }
 .botao:hover { transform: translateY(-2px); opacity: .92; }
 .botao-principal { background: var(--cor-destaque); color: var(--cor-texto); }
 .botao-secundario { border: 2px solid var(--cor-branco); color: var(--cor-branco); }
+
+/* ---------- Título das páginas internas ---------- */
+.pagina-titulo {
+  padding: 130px 0 60px;
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--cor-branco);
+}
+.pagina-titulo h1 { font-size: 2.3rem; margin-bottom: 8px; }
+.pagina-titulo p { opacity: .95; font-size: 1.1rem; }
 
 /* ---------- Seções ---------- */
 .secao { padding: 90px 0; }
@@ -112,9 +122,25 @@ h3 { font-size: 1.15rem; color: var(--cor-primaria); margin-bottom: 8px; }
 /* Parceiros */
 .parceiros { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
 .parceiro {
-  height: 100px; display: flex; align-items: center; justify-content: center;
+  height: 120px; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 15px; font-weight: 600;
   border: 2px dashed #ccd3db; border-radius: var(--raio); color: var(--cor-texto-claro);
+  transition: border-color .2s;
 }
+a.parceiro:hover { border-color: var(--cor-secundaria); }
+
+/* Chamada final (página inicial) */
+.chamada { text-align: center; }
+
+/* Colaboradores */
+.equipe { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+.pessoa { text-align: center; }
+.pessoa .foto {
+  width: 160px; height: 160px; margin: 0 auto 15px; border-radius: 50%;
+  object-fit: cover; background: var(--cor-fundo-alt);
+  display: flex; align-items: center; justify-content: center; color: var(--cor-texto-claro);
+}
+.pessoa p { color: var(--cor-texto-claro); }
 .parceiro img { max-height: 70px; }
 
 /* Contato */
@@ -126,13 +152,20 @@ h3 { font-size: 1.15rem; color: var(--cor-primaria); margin-bottom: 8px; }
 .contato-item strong { display: block; color: var(--cor-primaria); margin-bottom: 6px; }
 .contato-item span { color: var(--cor-texto-claro); }
 a.contato-item:hover { outline: 2px solid var(--cor-secundaria); }
-.redes { display: flex; flex-direction: column; gap: 4px; }
-.redes a:hover { color: var(--cor-secundaria); }
 
 /* ---------- Rodapé ---------- */
 .rodape {
   background: var(--cor-primaria); color: var(--cor-branco);
-  text-align: center; padding: 25px 0; font-size: .9rem;
+  padding: 50px 0 20px; font-size: .95rem;
+}
+.rodape-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 35px; }
+.rodape strong { display: block; margin-bottom: 10px; }
+.rodape-marca { font-size: 1.3rem; letter-spacing: 1px; }
+.rodape p { opacity: .9; margin-bottom: 6px; }
+.rodape a:hover { text-decoration: underline; }
+.rodape-copy {
+  text-align: center; font-size: .85rem; margin-top: 35px; padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.2);
 }
 
 /* ---------- WhatsApp flutuante ---------- */
@@ -158,6 +191,9 @@ a.contato-item:hover { outline: 2px solid var(--cor-secundaria); }
   .hero { padding: 120px 0 70px; }
   .hero h1 { font-size: 1.9rem; }
   .sobre-grid { grid-template-columns: 1fr; }
+  .rodape-grid { grid-template-columns: 1fr; gap: 25px; }
+  .pagina-titulo { padding: 110px 0 45px; }
+  .pagina-titulo h1 { font-size: 1.8rem; }
   .secao { padding: 65px 0; }
   h2 { font-size: 1.6rem; }
 }
