@@ -131,7 +131,7 @@ h3 { font-size: 1.15rem; color: var(--cor-primaria); margin-bottom: 8px; }
 .card {
   background: var(--cor-branco); padding: 28px; border-radius: var(--raio);
   box-shadow: 0 4px 15px rgba(0,0,0,.06);
-  border-top: 4px solid var(--cor-secundaria);
+  border-top: 4px solid var(--cor-destaque);
   transition: transform .2s;
 }
 .card:hover { transform: translateY(-4px); }
@@ -142,12 +142,13 @@ h3 { font-size: 1.15rem; color: var(--cor-primaria); margin-bottom: 8px; }
 .parceiro {
   height: 130px; display: flex; align-items: center; justify-content: center;
   text-align: center; padding: 20px; font-weight: 600;
-  background: var(--cor-branco); border: 1px solid #e3e6ee; border-radius: var(--raio);
+  background: var(--cor-branco); border-radius: var(--raio);
+  border-top: 4px solid var(--cor-destaque);
   color: var(--cor-primaria);
-  box-shadow: 0 4px 15px rgba(0,0,0,.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,.06);
   transition: transform .2s, border-color .2s, box-shadow .2s;
 }
-a.parceiro:hover { transform: translateY(-4px); border-color: var(--cor-destaque); box-shadow: 0 8px 20px rgba(0,0,0,.08); }
+a.parceiro:hover { transform: translateY(-4px); border-top-color: var(--cor-secundaria); box-shadow: 0 8px 20px rgba(0,0,0,.1); }
 
 /* Chamada final (página inicial) */
 .chamada { text-align: center; }
@@ -169,11 +170,13 @@ a.parceiro:hover { transform: translateY(-4px); border-color: var(--cor-destaque
 .contatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
 .contato-item {
   background: var(--cor-branco); padding: 25px; border-radius: var(--raio);
+  border-top: 4px solid var(--cor-destaque);
   box-shadow: 0 4px 15px rgba(0,0,0,.06);
+  transition: transform .2s, border-color .2s, box-shadow .2s;
 }
 .contato-item strong { display: block; color: var(--cor-primaria); margin-bottom: 6px; }
 .contato-item span { color: var(--cor-texto-claro); }
-a.contato-item:hover { outline: 2px solid var(--cor-secundaria); }
+a.contato-item:hover { transform: translateY(-4px); border-top-color: var(--cor-secundaria); box-shadow: 0 8px 20px rgba(0,0,0,.1); }
 
 /* ---------- Rodapé ---------- */
 .rodape {
