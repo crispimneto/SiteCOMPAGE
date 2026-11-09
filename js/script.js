@@ -94,3 +94,9 @@ document.querySelectorAll('.pessoa img.foto').forEach(img => {
     img.replaceWith(vazio);
   });
 });
+
+// ---------- Logos dos parceiros ----------
+// Se algum logo não for encontrado, mostra o nome do parceiro no lugar.
+document.querySelectorAll('.parceiro img').forEach(img => {
+  img.addEventListener('error', () => img.replaceWith(document.createTextNode(img.alt)));
+});

@@ -140,12 +140,14 @@ h3 { font-size: 1.15rem; color: var(--cor-primaria); margin-bottom: 8px; }
 /* Parceiros */
 .parceiros { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
 .parceiro {
-  height: 120px; display: flex; align-items: center; justify-content: center;
-  text-align: center; padding: 15px; font-weight: 600;
-  border: 2px dashed #ccd3db; border-radius: var(--raio); color: var(--cor-texto-claro);
-  transition: border-color .2s;
+  height: 130px; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 20px; font-weight: 600;
+  background: var(--cor-branco); border: 1px solid #e3e6ee; border-radius: var(--raio);
+  color: var(--cor-primaria);
+  box-shadow: 0 4px 15px rgba(0,0,0,.05);
+  transition: transform .2s, border-color .2s, box-shadow .2s;
 }
-a.parceiro:hover { border-color: var(--cor-secundaria); }
+a.parceiro:hover { transform: translateY(-4px); border-color: var(--cor-destaque); box-shadow: 0 8px 20px rgba(0,0,0,.08); }
 
 /* Chamada final (página inicial) */
 .chamada { text-align: center; }
@@ -161,7 +163,7 @@ a.parceiro:hover { border-color: var(--cor-secundaria); }
 .pessoa img.foto { display: block; border: 4px solid var(--cor-destaque); }
 .pessoa div.foto { font-family: var(--fonte-titulo); font-size: 3rem; font-weight: 700; color: var(--cor-primaria); }
 .pessoa p { color: var(--cor-texto-claro); }
-.parceiro img { max-height: 70px; }
+.parceiro img { max-height: 80px; max-width: 100%; width: auto; object-fit: contain; }
 
 /* Contato */
 .contatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
