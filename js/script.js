@@ -20,7 +20,7 @@ const contato = {
   email:         'contato@compage.com.br',
   instagram:     '@compageassessoria',
   instagramLink: 'https://www.instagram.com/compageassessoria/',
-  endereco:      'Rua Maranhão Sobrinho, nº 809 - Sala 10 - Galeria Blitz<br>Centro - Bacabal - MA - CEP 65700-000'
+  endereco:      'Rua Maranhão Sobrinho, <span class="sem-quebra">nº 809</span> - Sala 10<br>Galeria Blitz - Centro<br>Bacabal - MA<br><span class="sem-quebra">CEP 65700-000</span>'
 };
 
 // Descobre em qual página estamos (para destacar no menu)
@@ -35,7 +35,7 @@ if (topo) {
 
   topo.innerHTML = `
     <div class="container topo-conteudo">
-      <a href="index.html" class="logo">COMPAGE</a>
+      <a href="index.html" class="logo">COMPAGE<small>Consultoria &amp; Assessoria Financeira</small></a>
       <!-- Quando o logo chegar: <a href="index.html" class="logo"><img src="img/logo.svg" alt="COMPAGE"></a> -->
       <button class="menu-botao" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -58,6 +58,7 @@ if (rodape) {
     <div class="container rodape-grid">
       <div>
         <strong class="rodape-marca">COMPAGE</strong>
+        <p class="rodape-slogan">Consultoria &amp; Assessoria Financeira</p>
         <p>BPO Financeiro para empresas que querem um financeiro organizado sem montar um departamento.</p>
       </div>
       <div>
@@ -71,7 +72,7 @@ if (rodape) {
         <p>${contato.endereco}</p>
       </div>
     </div>
-    <p class="rodape-copy">&copy; ${new Date().getFullYear()} COMPAGE - BPO Financeiro. Todos os direitos reservados.</p>`;
+    <p class="rodape-copy">&copy; ${new Date().getFullYear()} COMPAGE - Consultoria &amp; Assessoria Financeira. Todos os direitos reservados.</p>`;
 
   // Botão flutuante do WhatsApp
   const zap = document.createElement('a');

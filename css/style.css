@@ -54,6 +54,11 @@ h3 { font-size: 1.15rem; color: var(--cor-primaria); margin-bottom: 8px; }
 }
 .logo { font-size: 1.5rem; font-weight: 700; color: var(--cor-primaria); letter-spacing: 1px; }
 .logo img { height: 45px; }
+.logo small {
+  display: block; font-size: .7rem; font-weight: 500; letter-spacing: .3px;
+  color: var(--cor-texto-claro); line-height: 1.1;
+}
+.sem-quebra { white-space: nowrap; }
 
 .menu { display: flex; gap: 28px; }
 .menu a { font-weight: 500; transition: color .2s; }
@@ -160,7 +165,8 @@ a.contato-item:hover { outline: 2px solid var(--cor-secundaria); }
 }
 .rodape-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 35px; }
 .rodape strong { display: block; margin-bottom: 10px; }
-.rodape-marca { font-size: 1.3rem; letter-spacing: 1px; }
+.rodape-marca { font-size: 1.3rem; letter-spacing: 1px; margin-bottom: 2px !important; }
+.rodape .rodape-slogan { font-size: .85rem; opacity: .8; margin-bottom: 12px; }
 .rodape p { opacity: .9; margin-bottom: 6px; }
 .rodape a:hover { text-decoration: underline; }
 .rodape-copy {
