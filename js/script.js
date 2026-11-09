@@ -35,8 +35,7 @@ if (topo) {
 
   topo.innerHTML = `
     <div class="container topo-conteudo">
-      <a href="index.html" class="logo">COMPAGE<small>Consultoria &amp; Assessoria Financeira</small></a>
-      <!-- Quando o logo chegar: <a href="index.html" class="logo"><img src="img/logo.svg" alt="COMPAGE"></a> -->
+      <a href="index.html" class="logo"><img src="img/logo/logo-horizontal.svg" alt="COMPAGE - Consultoria &amp; Assessoria Financeira"></a>
       <button class="menu-botao" aria-label="Abrir menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -57,7 +56,7 @@ if (rodape) {
   rodape.innerHTML = `
     <div class="container rodape-grid">
       <div>
-        <strong class="rodape-marca">COMPAGE</strong>
+        <img class="rodape-logo" src="img/logo/logo-vertical-negativo.svg" alt="COMPAGE">
         <p class="rodape-slogan">Consultoria &amp; Assessoria Financeira</p>
         <p>BPO Financeiro para empresas que querem um financeiro organizado sem montar um departamento.</p>
       </div>
@@ -84,3 +83,14 @@ if (rodape) {
   zap.textContent = 'WhatsApp';
   document.body.appendChild(zap);
 }
+
+// ---------- Fotos dos colaboradores ----------
+// Se alguma foto não for encontrada, mostra um círculo com a inicial do nome.
+document.querySelectorAll('.pessoa img.foto').forEach(img => {
+  img.addEventListener('error', () => {
+    const vazio = document.createElement('div');
+    vazio.className = 'foto';
+    vazio.textContent = (img.alt || '?').charAt(0);
+    img.replaceWith(vazio);
+  });
+});

@@ -1,19 +1,20 @@
 /* =========================================================
    COMPAGE - Estilos do site
-   CORES: troque apenas as variáveis abaixo quando a paleta
-   da marca chegar. O resto do site se ajusta sozinho.
+   Paleta e tipografia conforme o Manual de Identidade Visual.
+   Para ajustar cores, mexa só nas variáveis abaixo.
    ========================================================= */
 :root {
-  --cor-primaria: #1f3a5f;      /* cor principal da marca (provisória) */
-  --cor-secundaria: #3d7ea6;    /* cor de apoio (provisória) */
-  --cor-destaque: #f0a500;      /* botões / detalhes (provisória) */
-  --cor-texto: #2b2b2b;
+  --cor-primaria: #020659;      /* azul escuro institucional */
+  --cor-secundaria: #212AE8;    /* azul institucional */
+  --cor-destaque: #FF7001;      /* laranja institucional */
+  --cor-texto: #1c1d3a;
   --cor-texto-claro: #6b6b6b;
   --cor-fundo: #ffffff;
   --cor-fundo-alt: #f4f6f8;
   --cor-branco: #ffffff;
 
-  --fonte: "Segoe UI", Roboto, Arial, sans-serif;
+  --fonte: Verdana, Geneva, Tahoma, sans-serif;            /* fonte de apoio da marca */
+  --fonte-titulo: "Ysabeau Office", Verdana, sans-serif;    /* fonte principal da marca */
   --raio: 10px;
   --largura-max: 1100px;
 }
@@ -37,6 +38,7 @@ img { max-width: 100%; display: block; }
   padding: 0 20px;
 }
 
+h1, h2, h3 { font-family: var(--fonte-titulo); font-weight: 700; }
 h2 { font-size: 2rem; color: var(--cor-primaria); margin-bottom: 10px; }
 h3 { font-size: 1.15rem; color: var(--cor-primaria); margin-bottom: 8px; }
 .subtitulo { color: var(--cor-texto-claro); margin-bottom: 40px; }
@@ -52,8 +54,8 @@ h3 { font-size: 1.15rem; color: var(--cor-primaria); margin-bottom: 8px; }
   display: flex; align-items: center; justify-content: space-between;
   height: 70px;
 }
-.logo { font-size: 1.5rem; font-weight: 700; color: var(--cor-primaria); letter-spacing: 1px; }
-.logo img { height: 45px; }
+.logo { display: flex; align-items: center; }
+.logo img { height: 48px; width: auto; }
 .logo small {
   display: block; font-size: .7rem; font-weight: 500; letter-spacing: .3px;
   color: var(--cor-texto-claro); line-height: 1.1;
@@ -73,10 +75,20 @@ h3 { font-size: 1.15rem; color: var(--cor-primaria); margin-bottom: 8px; }
 
 /* ---------- Início (hero) ---------- */
 .hero {
-  padding: 150px 0 100px;
-  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  position: relative; overflow: hidden;
+  padding: 150px 0 110px;
+  background: var(--cor-primaria);
   color: var(--cor-branco);
 }
+.hero .container { position: relative; z-index: 1; }
+/* símbolo da marca como elemento decorativo */
+.hero::after {
+  content: ""; position: absolute; right: 4%; bottom: 0;
+  width: 340px; height: 260px;
+  background: url("../img/logo/simbolo-negativo.svg") no-repeat right bottom / contain;
+  opacity: .12;
+}
+.hero h1 span { color: var(--cor-destaque); }
 .hero h1 { font-size: 2.6rem; line-height: 1.2; max-width: 750px; margin-bottom: 20px; }
 .hero p { font-size: 1.15rem; max-width: 650px; opacity: .95; margin-bottom: 35px; }
 .hero-botoes { display: flex; gap: 15px; flex-wrap: wrap; }
@@ -86,13 +98,14 @@ h3 { font-size: 1.15rem; color: var(--cor-primaria); margin-bottom: 8px; }
   font-weight: 600; transition: transform .2s, opacity .2s;
 }
 .botao:hover { transform: translateY(-2px); opacity: .92; }
-.botao-principal { background: var(--cor-destaque); color: var(--cor-texto); }
+.botao-principal { background: var(--cor-destaque); color: var(--cor-primaria); }
 .botao-secundario { border: 2px solid var(--cor-branco); color: var(--cor-branco); }
 
 /* ---------- Título das páginas internas ---------- */
 .pagina-titulo {
   padding: 130px 0 60px;
-  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  background: var(--cor-primaria);
+  border-bottom: 5px solid var(--cor-destaque);
   color: var(--cor-branco);
 }
 .pagina-titulo h1 { font-size: 2.3rem; margin-bottom: 8px; }
@@ -145,6 +158,8 @@ a.parceiro:hover { border-color: var(--cor-secundaria); }
   object-fit: cover; background: var(--cor-fundo-alt);
   display: flex; align-items: center; justify-content: center; color: var(--cor-texto-claro);
 }
+.pessoa img.foto { display: block; border: 4px solid var(--cor-destaque); }
+.pessoa div.foto { font-family: var(--fonte-titulo); font-size: 3rem; font-weight: 700; color: var(--cor-primaria); }
 .pessoa p { color: var(--cor-texto-claro); }
 .parceiro img { max-height: 70px; }
 
@@ -165,7 +180,7 @@ a.contato-item:hover { outline: 2px solid var(--cor-secundaria); }
 }
 .rodape-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 35px; }
 .rodape strong { display: block; margin-bottom: 10px; }
-.rodape-marca { font-size: 1.3rem; letter-spacing: 1px; margin-bottom: 2px !important; }
+.rodape-logo { height: 90px; width: auto; margin-bottom: 14px; }
 .rodape .rodape-slogan { font-size: .85rem; opacity: .8; margin-bottom: 12px; }
 .rodape p { opacity: .9; margin-bottom: 6px; }
 .rodape a:hover { text-decoration: underline; }
@@ -196,6 +211,8 @@ a.contato-item:hover { outline: 2px solid var(--cor-secundaria); }
 
   .hero { padding: 120px 0 70px; }
   .hero h1 { font-size: 1.9rem; }
+  .hero::after { width: 180px; height: 140px; opacity: .1; }
+  .logo img { height: 40px; }
   .sobre-grid { grid-template-columns: 1fr; }
   .rodape-grid { grid-template-columns: 1fr; gap: 25px; }
   .pagina-titulo { padding: 110px 0 45px; }
