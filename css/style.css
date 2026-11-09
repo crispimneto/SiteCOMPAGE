@@ -1,0 +1,163 @@
+/* =========================================================
+   COMPAGE - Estilos do site
+   CORES: troque apenas as variáveis abaixo quando a paleta
+   da marca chegar. O resto do site se ajusta sozinho.
+   ========================================================= */
+:root {
+  --cor-primaria: #1f3a5f;      /* cor principal da marca (provisória) */
+  --cor-secundaria: #3d7ea6;    /* cor de apoio (provisória) */
+  --cor-destaque: #f0a500;      /* botões / detalhes (provisória) */
+  --cor-texto: #2b2b2b;
+  --cor-texto-claro: #6b6b6b;
+  --cor-fundo: #ffffff;
+  --cor-fundo-alt: #f4f6f8;
+  --cor-branco: #ffffff;
+
+  --fonte: "Segoe UI", Roboto, Arial, sans-serif;
+  --raio: 10px;
+  --largura-max: 1100px;
+}
+
+/* ---------- Base ---------- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body {
+  font-family: var(--fonte);
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.container {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 { font-size: 2rem; color: var(--cor-primaria); margin-bottom: 10px; }
+h3 { font-size: 1.15rem; color: var(--cor-primaria); margin-bottom: 8px; }
+.subtitulo { color: var(--cor-texto-claro); margin-bottom: 40px; }
+
+/* ---------- Cabeçalho ---------- */
+.topo {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: var(--cor-branco);
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+  z-index: 100;
+}
+.topo-conteudo {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 70px;
+}
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--cor-primaria); letter-spacing: 1px; }
+.logo img { height: 45px; }
+
+.menu { display: flex; gap: 28px; }
+.menu a { font-weight: 500; transition: color .2s; }
+.menu a:hover { color: var(--cor-secundaria); }
+
+.menu-botao {
+  display: none; background: none; border: none; cursor: pointer;
+  flex-direction: column; gap: 5px;
+}
+.menu-botao span { width: 26px; height: 3px; background: var(--cor-primaria); border-radius: 2px; }
+
+/* ---------- Início (hero) ---------- */
+.hero {
+  padding: 150px 0 100px;
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--cor-branco);
+}
+.hero h1 { font-size: 2.6rem; line-height: 1.2; max-width: 750px; margin-bottom: 20px; }
+.hero p { font-size: 1.15rem; max-width: 650px; opacity: .95; margin-bottom: 35px; }
+.hero-botoes { display: flex; gap: 15px; flex-wrap: wrap; }
+
+.botao {
+  display: inline-block; padding: 14px 28px; border-radius: var(--raio);
+  font-weight: 600; transition: transform .2s, opacity .2s;
+}
+.botao:hover { transform: translateY(-2px); opacity: .92; }
+.botao-principal { background: var(--cor-destaque); color: var(--cor-texto); }
+.botao-secundario { border: 2px solid var(--cor-branco); color: var(--cor-branco); }
+
+/* ---------- Seções ---------- */
+.secao { padding: 90px 0; }
+.secao-alternada { background: var(--cor-fundo-alt); }
+
+/* Sobre */
+.sobre-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 50px; align-items: center; }
+.sobre-grid p { margin-bottom: 15px; }
+.destaques { list-style: none; display: grid; gap: 15px; }
+.destaques li {
+  background: var(--cor-fundo-alt); padding: 18px 20px; border-radius: var(--raio);
+  border-left: 4px solid var(--cor-destaque);
+}
+.destaques strong { display: block; color: var(--cor-primaria); }
+.destaques span { color: var(--cor-texto-claro); font-size: .95rem; }
+
+/* Serviços */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.card {
+  background: var(--cor-branco); padding: 28px; border-radius: var(--raio);
+  box-shadow: 0 4px 15px rgba(0,0,0,.06);
+  border-top: 4px solid var(--cor-secundaria);
+  transition: transform .2s;
+}
+.card:hover { transform: translateY(-4px); }
+.card p { color: var(--cor-texto-claro); }
+
+/* Parceiros */
+.parceiros { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+.parceiro {
+  height: 100px; display: flex; align-items: center; justify-content: center;
+  border: 2px dashed #ccd3db; border-radius: var(--raio); color: var(--cor-texto-claro);
+}
+.parceiro img { max-height: 70px; }
+
+/* Contato */
+.contatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+.contato-item {
+  background: var(--cor-branco); padding: 25px; border-radius: var(--raio);
+  box-shadow: 0 4px 15px rgba(0,0,0,.06);
+}
+.contato-item strong { display: block; color: var(--cor-primaria); margin-bottom: 6px; }
+.contato-item span { color: var(--cor-texto-claro); }
+a.contato-item:hover { outline: 2px solid var(--cor-secundaria); }
+.redes { display: flex; flex-direction: column; gap: 4px; }
+.redes a:hover { color: var(--cor-secundaria); }
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  background: var(--cor-primaria); color: var(--cor-branco);
+  text-align: center; padding: 25px 0; font-size: .9rem;
+}
+
+/* ---------- WhatsApp flutuante ---------- */
+.whatsapp-flutuante {
+  position: fixed; right: 20px; bottom: 20px;
+  background: #25d366; color: #fff; font-weight: 600;
+  padding: 12px 20px; border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2); z-index: 90;
+}
+
+/* ---------- Celular / tablet ---------- */
+@media (max-width: 800px) {
+  .menu-botao { display: flex; }
+  .menu {
+    position: absolute; top: 70px; left: 0; right: 0;
+    flex-direction: column; gap: 0; background: var(--cor-branco);
+    box-shadow: 0 6px 10px rgba(0,0,0,.08);
+    display: none;
+  }
+  .menu.aberto { display: flex; }
+  .menu a { padding: 15px 20px; border-top: 1px solid #eee; }
+
+  .hero { padding: 120px 0 70px; }
+  .hero h1 { font-size: 1.9rem; }
+  .sobre-grid { grid-template-columns: 1fr; }
+  .secao { padding: 65px 0; }
+  h2 { font-size: 1.6rem; }
+}
